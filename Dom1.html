@@ -1,0 +1,17 @@
+<script language="JavaScript">
+xmlDoc=new window.XMLHttpRequest();
+xmlDoc.open("GET",
+"http://www.abelski.com/courses/dom/lib_doc.xml",false);
+xmlDoc.send("");
+ob = xmlDoc.responseXML.documentElement;
+childs = ob.childNodes;
+child = ob.firstChild; //getting the first child
+for(i=0;i<childs.length;i++)
+{
+if(child.nodeType==1)
+{
+document.write(child.nodeName+"<br>");
+}
+child = child.nextSibling;
+}
+</script>
